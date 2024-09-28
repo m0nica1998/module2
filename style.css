@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     padding: 20px;
 }
 
@@ -17,6 +17,7 @@ header {
 
 h1 {
     font-size: 200%;
+    font-weight: 700; /* Titolo più evidente */
 }
 
 /* General section styling */
@@ -29,26 +30,48 @@ h1 {
 .box {
     position: relative;
     border: 1px solid black;
-    background-color: #f0f0f0;
     padding: 20px;
     margin: 10px;
+    background-color: #d3d3d3; /* Light grey background for the main boxes */
+    flex: 1 1 30%; /* Assicura che i riquadri abbiano uguale larghezza */
+    font-weight: 500;
 }
 
 /* Title region */
 .section-title {
     position: absolute;
     top: 10px;
-    right: 10px;
-    background-color: #ddd;
+    right: 0;
     padding: 5px;
     border: 1px solid black;
     font-size: 125%;
+    font-weight: 700; /* Titoli delle sezioni più evidenti */
+    min-height: 40px; /* Altezza minima */
+    width: 150px; /* Larghezza dei riquadri titoli allungata orizzontalmente */
+    display: flex;
+    align-items: center; /* Allinea verticalmente il testo */
+    justify-content: center; /* Allinea orizzontalmente il testo */
 }
 
+/* Colors for each section */
+.box:nth-child(1) .section-title {
+    background-color: #dcb5b4; /* Antique pink for Chicken */
+}
+
+.box:nth-child(2) .section-title {
+    background-color: #cc4444; /* Less intense red for Beef */
+    color: #ffffff; /* White text for Beef */
+}
+
+.box:nth-child(3) .section-title {
+    background-color: #d2a679; /* Ochre yellow for Sushi */
+}
+
+/* Responsive layout */
 /* Desktop view (992px and above) */
 @media (min-width: 992px) {
     .box {
-        width: 32%;
+        width: 30%; /* Assicura che i riquadri prendano uguale spazio */
     }
 }
 
@@ -83,3 +106,5 @@ p {
 h1 {
     font-size: 175%;
 }
+
+
